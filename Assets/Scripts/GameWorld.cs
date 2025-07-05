@@ -76,5 +76,5 @@ public enum TileType
     Right,
     Left,
     Up,
-    Down,
+    Down
 }

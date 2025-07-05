@@ -24,31 +24,21 @@ public class WorldVisualizer : MonoBehaviour
         foreach (Tile tile in gameWorld.tiles)
         {
             if (tile == null) continue;
-            GameObject prefab = GetPrefabForTileType(tile.type);
-            GameObject tileObj = Instantiate(
-                prefab,
-                new Vector3(tile.position.x, tile.position.y, 0),
-                Quaternion.identity,
-                tilesParent.transform // Set parent
-            );
-            tileObj.name = $"{tile.position.x},{tile.position.y}";
+            GameObject tileObj = new GameObject($"{tile.position.x},{tile.position.y}");
+            tileObj.transform.parent = tilesParent.transform;
+            tileObj.transform.position = new Vector3(tile.position.x, tile.position.y, 0);
             TileVisual visual = tileObj.AddComponent<TileVisual>();
-            visual.Initialize(tile, emptyTilePrefab, occupiedTilePrefab);
+            visual.Initialize(
+                tile,
+                emptyTilePrefab,
+                occupiedTilePrefab,
+                rightTilePrefab,
+                leftTilePrefab,
+                upTilePrefab,
+                downTilePrefab,
+                wallTilePrefab
+            );
             tileVisuals[tile] = visual;
-        }
-    }
-
-    private GameObject GetPrefabForTileType(TileType type)
-    {
-        switch (type)
-        {
-            case TileType.Right: return rightTilePrefab;
-            case TileType.Left:  return leftTilePrefab;
-            case TileType.Up:    return upTilePrefab;
-            case TileType.Down:  return downTilePrefab;
-            case TileType.Wall:  return wallTilePrefab;
-            case TileType.Empty:
-            default:             return emptyTilePrefab;
         }
     }
 
@@ -58,7 +48,7 @@ public class WorldVisualizer : MonoBehaviour
         {
             var tile = kvp.Key;
             var visual = kvp.Value;
-            visual.UpdateVisual(tile.isOccupied);
+            visual.UpdateVisual(tile.isOccupied, tile.type);
         }
     }
 }
