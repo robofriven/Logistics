@@ -1,132 +1,95 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class GameController : MonoBehaviour
 {
-    public GameWorld gameWorld;
-    public WorldVisualizer worldVisualizer;
-    public ThingVisualizer thingVisualizer;
-    public SpawnerVisualizer spawnerVisualizer;
+    public TileController tileController;
+    public ThingPool thingPool;
+    [Tooltip("Spawner data for the spawner")]
+    public SpawnerData spawnerData;
+
+    private List<Spawner> spawners = new List<Spawner>();
 
     private int tick = 0;
     [SerializeField]
-    [Range(0.1f, 5f)]
-    private float tickRate = 0.5f; // Number of ticks per second
-    private float tickTimer = 0f;
+    [Tooltip("How many ticks per second")]
+    [Range(1, 60)]
+    private int ticksPerSecond;
 
-    [SerializeField]
     private bool isRunning = false;
 
-    private List<Thing> things = new List<Thing>();
-    private List<Spawner> spawners = new List<Spawner>();
+    // Delegated Factory Functions
+    Action<SpawnerData, ThingPool, Destination, GameController> CreateSpawner = SpawnerFactory.CreateSpawner;
+    Func<SpawnerData, ThingPool, Destination> CreateDestination = DestinationFactory.CreateDestination;
 
     void Start()
     {
-        if (gameWorld == null || worldVisualizer == null || thingVisualizer == null || spawnerVisualizer == null)
+        if (tileController == null || spawnerData == null || thingPool == null)
         {
             Debug.LogError("Something not assigned in Editor");
             return;
         }
 
-        gameWorld.InitializeWorld();
-        worldVisualizer.Initialize(gameWorld);
+        tileController.InitializeWorld();
 
-        // Example tile setup
-        gameWorld.GetTile(new Vector2Int(0, 0)).SetType(TileType.Right);
-        gameWorld.GetTile(new Vector2Int(1, 0)).SetType(TileType.Left);
-        gameWorld.GetTile(new Vector2Int(2, 0)).SetType(TileType.Up);
-        gameWorld.GetTile(new Vector2Int(3, 0)).SetType(TileType.Down);
-
-        Tile spawnTile = gameWorld.GetTile(new Vector2Int(4, 0));
-        spawnTile.SetType(TileType.Empty);
-
-        Spawner spawner = new Spawner(
-            this,
-            new Thing("TestThing"),
-            3,
-            gameWorld.GetTile(new Vector2Int(1, 8)),
-            spawnTile.position,
-            Vector2Int.up,
-            tick
-        );
-        spawners.Add(spawner);
-
-        // Visualize initial spawners and things
-        spawnerVisualizer.UpdateSpawners(spawners);
-        thingVisualizer.UpdateThings(things);
+        // Create destination first, then spawner
+        Destination destination = CreateDestination(spawnerData, thingPool);
+        CreateSpawner(spawnerData, thingPool, destination, this);
     }
 
     void Update()
     {
-        if (isRunning)
+        // Start/stop ticking based on space key
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            tickTimer += Time.deltaTime;
-            float tickInterval = 1f / tickRate;
-
-            while (tickTimer >= tickInterval)
+            isRunning = !isRunning;
+            
+            if (isRunning)
             {
-                tick++;
-                Tick();
-                tickTimer -= tickInterval;
+                InvokeRepeating(nameof(Tick), 1f / ticksPerSecond, 1f / ticksPerSecond);
+            }
+            else
+            {
+                CancelInvoke(nameof(Tick));
             }
         }
+        
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (!isRunning)
+            {
+                Tick(); // Manually tick once if not running
+            }
+            else
+            {
+                CancelInvoke(nameof(Tick));
+                isRunning = false; // Stop the automatic ticking
+            }
+
+        }
+    }
+
+    public void RegisterSpawner(Spawner spawner)
+    {
+        spawners.Add(spawner);
     }
 
     private void Tick()
     {
-        // Example: tick all spawners
+        tick++;
+        // Update all active things from the pool
+        List<Thing> activeThings = thingPool.GetActiveThings();
+        foreach (Thing thing in activeThings)
+        {
+            Mover.Move(tileController, thing);
+            thing.OnTick(tick);
+        }
+
+        // Update all spawners
         foreach (Spawner spawner in spawners)
         {
             spawner.OnTick(tick);
         }
-
-        // Move things, update visuals, etc.
-        CheckTiles();
-        IterateOverThings();
-
-        // Update visuals after logic
-        spawnerVisualizer.UpdateSpawners(spawners);
-        thingVisualizer.UpdateThings(things);
-    }
-
-    private void CheckTiles()
-    {
-        // Implement your movement and tile logic here
-    }
-
-    private void IterateOverThings()
-    {
-        // Example: iterate over things in creation order
-        foreach (Thing thing in things)
-        {
-            Mover.Move(gameWorld, thing, gameWorld.GetTile(thing.position));
-            thingVisualizer.UpdateThings(things);
-            Debug.Log($"Thing {thing.name} moved to {thing.position}");            
-        }
-    }
-
-    public void AddThing(Thing thing)
-    {
-        Debug.Log("Adding thing: " + thing.name);
-        things.Add(thing);
-        //thingVisualizer.UpdateThings(things);
-    }
-
-    public void RemoveThing(Thing thing)
-    {
-        things.Remove(thing);
-        thingVisualizer.UpdateThings(things);
-    }
-
-    public void AddSpawner(Spawner spawner)
-    {
-        spawners.Add(spawner);
-        spawnerVisualizer.UpdateSpawners(spawners);
-    }
-
-    public void RemoveSpawner(Spawner spawner)
-    {
-        spawners.Remove(spawner);
-        spawnerVisualizer.UpdateSpawners(spawners);
     }
 }

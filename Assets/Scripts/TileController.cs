@@ -1,11 +1,17 @@
 using UnityEngine;
 
-public class GameWorld : MonoBehaviour
+public class TileController : MonoBehaviour
 {
     public int width = 10;
     public int height = 10;
 
-    public Tile[,] tiles {get; private set;}
+    public Sprite emptyTileSprite;
+    public Sprite upTileSprite;
+    public Sprite downTileSprite;
+    public Sprite rightTileSprite;
+    public Sprite leftTileSprite;    
+
+    public Tile[,] tiles { get; private set; }
 
     public void InitializeWorld()
     {
@@ -19,16 +25,16 @@ public class GameWorld : MonoBehaviour
             Debug.LogError("Invalid world dimensions.");
             return;
         }
-
-
+        
         tiles = new Tile[width, height];
+        GameObject tilesObj = new GameObject("Tiles");
 
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
                 Vector2Int position = new Vector2Int(x, y);
-                Tile tile = new Tile(position, TileType.Empty); // Assuming all tiles are usable initially
+                Tile tile = TileFactory.CreateTile(this, position, TileType.Empty, tilesObj.transform);
                 tiles[x, y] = tile;
             }
         }
@@ -43,38 +49,17 @@ public class GameWorld : MonoBehaviour
         }
         return tiles[position.x, position.y];
     }
-}
 
-public class Tile
-{
-    public Vector2Int position { get; private set; }
-    public TileType type { get; private set; }
-    public bool isOccupied{ get; private set; }
-
-    public Tile(Vector2Int position, TileType type)
+    public Sprite GetTileSprite(TileType type)
     {
-        this.position = position;
-        this.type = type;
-        this.isOccupied = false; // Initially not occupied
+        switch (type)
+        {
+            case TileType.Empty: return emptyTileSprite;
+            case TileType.Up: return upTileSprite;
+            case TileType.Down: return downTileSprite;
+            case TileType.Right: return rightTileSprite;
+            case TileType.Left: return leftTileSprite;
+            default: return null; // or a default sprite
+        }
     }
-
-    public void SetType(TileType newType)
-    {
-        type = newType;
-    }
-
-    public void SetOccupied(bool occupied)
-    {
-        isOccupied = occupied;
-    }
-}
-
-public enum TileType
-{
-    Empty,
-    Wall,
-    Right,
-    Left,
-    Up,
-    Down
 }

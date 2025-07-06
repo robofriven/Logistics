@@ -3,8 +3,7 @@ using UnityEngine;
 public class MouseController : MonoBehaviour
 {
     public Camera mainCamera;
-    public WorldVisualizer worldVisualizer;
-    public GameWorld gameWorld;
+    public TileController tileController; // was: public GameWorld gameWorld;
 
     void Update()
     {
@@ -12,12 +11,11 @@ public class MouseController : MonoBehaviour
         {
             Vector3 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2Int gridPos = new Vector2Int(Mathf.FloorToInt(mouseWorldPos.x), Mathf.FloorToInt(mouseWorldPos.y));
-            Tile tile = gameWorld.GetTile(gridPos);
+            Tile tile = tileController.GetTile(gridPos);
 
             if (tile != null)
             {
                 CycleTileType(tile);
-                worldVisualizer.UpdateThings();
             }
         }
     }

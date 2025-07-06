@@ -2,8 +2,9 @@ using UnityEngine;
 
 public static class Mover
 {
-    public static bool Move(GameWorld world, Thing thing, Tile tile)
+    public static bool Move(TileController world, Thing thing)
     {
+        Tile tile = world.GetTile(thing.position);
         Vector2Int direction = DirectionFromTileType(tile.type);
         if (direction == Vector2Int.zero)
             return false; // No movement for this tile type
@@ -19,7 +20,7 @@ public static class Mover
         world.GetTile(currentPosition)?.SetOccupied(false);
 
         // Move thing
-        thing.SetPosition(newPosition);
+        thing.MoveTo(newPosition);
 
         // Set new tile
         targetTile.SetOccupied(true);
