@@ -10,6 +10,9 @@ public class TileController : MonoBehaviour
     public Sprite downTileSprite;
     public Sprite rightTileSprite;
     public Sprite leftTileSprite;    
+    public Sprite wallTileSprite;
+    public Sprite spawnerTileSprite;
+    public Sprite destinationTileSprite;
 
     public Tile[,] tiles { get; private set; }
 

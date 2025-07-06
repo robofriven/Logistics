@@ -5,6 +5,8 @@ public class Tile : MonoBehaviour
     public Vector2Int position;
     public TileType type;
     public bool isOccupied;
+    // Might want to update this later as we get other things that might cause things to be occupiable.
+    public bool isOccupiable => type != TileType.Wall && type != TileType.Spawner && type != TileType.Destination;
 
     private TileController tileController;
 
@@ -35,6 +37,10 @@ public class Tile : MonoBehaviour
 
     public void SetOccupied(bool occupied)
     {
+        // Destinations can never be occupied
+        if (!isOccupiable)
+            return;
+        
         isOccupied = occupied;
     }
 }

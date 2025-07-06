@@ -5,5 +5,7 @@ public enum TileType
     Right,
     Down,
     Left,
-    Wall
+    Wall,
+    Spawner,
+    Destination
 }

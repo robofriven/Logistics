@@ -15,8 +15,8 @@ public class Thing : MonoBehaviour
         this.destinationObject = destinationObject;
         name = data.thingName;
 
-        // Set sprite if you have a SpriteRenderer
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        // Find the SpriteRenderer in the child object
+        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
         if (sr != null && data.sprite != null)
         {
             sr.sprite = data.sprite;
@@ -24,12 +24,25 @@ public class Thing : MonoBehaviour
         }
 
         transform.position = new Vector3(position.x, position.y, 0);
+        
+        // Update the child sprite position to be centered
+        if (sr != null)
+        {
+            sr.transform.position = new Vector3(position.x + 0.5f, position.y + 0.5f, 0);
+        }
     }
 
     public void MoveTo(Vector2Int newPosition)
     {
         position = newPosition;
         transform.position = new Vector3(position.x, position.y, 0);
+        
+        // Update the child sprite position too
+        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.transform.position = new Vector3(position.x + 0.5f, position.y + 0.5f, 0);
+        }
     }
 
     public void OnTick(int tick)
