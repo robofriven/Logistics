@@ -9,3 +9,13 @@ public enum TileType
     Spawner,
     Destination
 }
+
+public enum RouteColor
+{
+    Red,
+    Blue,
+    Green,
+    Yellow,
+    Purple,
+    Orange
+}

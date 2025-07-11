@@ -22,6 +22,7 @@ public class ThingPool : MonoBehaviour
     
     private Thing CreateNewThing()
     {
+        // Create a new GameObject for the Thing
         GameObject thingObj = new GameObject("PooledThing");
         thingObj.transform.parent = pool.transform; // Keep organized under pool
         thingObj.SetActive(false);
@@ -33,11 +34,12 @@ public class ThingPool : MonoBehaviour
         sr.sortingLayerName = "Things";
         
         Thing thing = thingObj.AddComponent<Thing>();
+        
         availableThings.Enqueue(thing);
         return thing;
     }
     
-    public Thing GetThing()
+    public Thing GetThing(int id, ThingData data, Vector2Int startPosition, Vector2Int destination, Destination destinationObject = null)
     {
         Thing thing;
         
@@ -52,6 +54,8 @@ public class ThingPool : MonoBehaviour
             availableThings.Dequeue(); // Remove the one we just added
         }
         
+        // Configure the thing when it's pulled from pool
+        thing.Initialize(id, data, startPosition, destination, destinationObject);
         thing.gameObject.SetActive(true);
         activeThings.Add(thing);
         return thing;

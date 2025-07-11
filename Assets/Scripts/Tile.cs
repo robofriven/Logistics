@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
+    public int id;
     public Vector2Int position;
     public TileType type;
     public bool isOccupied;
     // Might want to update this later as we get other things that might cause things to be occupiable.
-    public bool isOccupiable => type != TileType.Wall && type != TileType.Spawner && type != TileType.Destination;
+    public bool isOccupiable => type == TileType.Wall && type == TileType.Spawner && type == TileType.Destination;
 
     private TileController tileController;
 

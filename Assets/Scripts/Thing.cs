@@ -2,33 +2,44 @@ using UnityEngine;
 
 public class Thing : MonoBehaviour
 {
+    public int id;
     public ThingData data;
     public Vector2Int position;
     public Vector2Int destination;
     public Destination destinationObject; // Direct reference instead of lookup
 
-    public void Initialize(ThingData data, Vector2Int startPosition, Vector2Int destination, Destination destinationObject = null)
+    private GameController gameController;
+    private SpriteRenderer spriteRenderer;
+
+    public void Initialize(int id, ThingData data, Vector2Int startPosition, Vector2Int destination, Destination destinationObject = null)
     {
+        this.id = id;
         this.data = data;
         this.position = startPosition;
         this.destination = destination;
         this.destinationObject = destinationObject;
         name = data.thingName;
-
-        // Find the SpriteRenderer in the child object
-        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
-        if (sr != null && data.sprite != null)
+        gameController = FindFirstObjectByType<GameController>();
+        if (gameController == null)
         {
-            sr.sprite = data.sprite;
-            sr.sortingLayerName = "Things";
+            Debug.LogError("Thing: GameController not found! It exists, but you can't find it");
+            return;
+        }
+
+        // Cache the sprite renderer
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        if (spriteRenderer != null && data.sprite != null)
+        {
+            spriteRenderer.sprite = data.sprite;
+            spriteRenderer.sortingLayerName = "Things";
         }
 
         transform.position = new Vector3(position.x, position.y, 0);
         
         // Update the child sprite position to be centered
-        if (sr != null)
+        if (spriteRenderer != null)
         {
-            sr.transform.position = new Vector3(position.x + 0.5f, position.y + 0.5f, 0);
+            spriteRenderer.transform.position = new Vector3(position.x + 0.5f, position.y + 0.5f, 0);
         }
     }
 
@@ -37,11 +48,10 @@ public class Thing : MonoBehaviour
         position = newPosition;
         transform.position = new Vector3(position.x, position.y, 0);
         
-        // Update the child sprite position too
-        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
-        if (sr != null)
+        // Use cached sprite renderer
+        if (spriteRenderer != null)
         {
-            sr.transform.position = new Vector3(position.x + 0.5f, position.y + 0.5f, 0);
+            spriteRenderer.transform.position = new Vector3(position.x + 0.5f, position.y + 0.5f, 0);
         }
     }
 
@@ -60,8 +70,8 @@ public class Thing : MonoBehaviour
             else
             {
                 // Fallback for coord-only destinations
-                Debug.Log($"{name} reached coordinate destination {destination}");
-                // Handle coordinate-only logic here
+                Debug.Log($"{name} reached coordinate destination. Tis been delivered m'lord");
+                gameController.IncrementScore(data.scoreValue);
             }
         }
     }

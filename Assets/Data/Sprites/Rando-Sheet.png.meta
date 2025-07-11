@@ -1,0 +1,1802 @@
+fileFormatVersion: 2
+guid: d985b938525bcf84c99412c2928c636f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8251485414471037152
+    second: Rando-Sheet_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rando-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 886
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630904d79fab5a943a995d72b85d744a
+      internalID: 430140115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 886
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455aefb8e670c224a8c9f89cb4817edb
+      internalID: -528113213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 886
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f002f67c08f1f844f9aeffd133ce0a86
+      internalID: 1393541291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 886
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77edfe3c99b99b47b17889388ec6707
+      internalID: -1243940340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 886
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9332d72e78dc4468142b6f799caa7a
+      internalID: 1054743879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 886
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee59c50f4ab5d6b4793834459a19e0b2
+      internalID: -1034627888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 886
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5777061514d36554eaaebc31db4760b1
+      internalID: -219579909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 886
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d07b14f1015fb47aef944fa97ceba1
+      internalID: -558296753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 776
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe077eb865fa830488946bd1d81fdced
+      internalID: -204196568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 776
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518b10f9eea87654d8c012deefc6a66b
+      internalID: -1423330920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 776
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176dd43e939625d458a248cb6f7dccf1
+      internalID: -1870211701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 778
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42019fae568ae2544895badd6747b668
+      internalID: 1442826835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 776
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94428a6d36bf1741bde3e094b917257
+      internalID: 1207611656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 776
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde2fc15f4d2ce74a893a7ec278c46cb
+      internalID: 1567232603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 776
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56890e9a21f6b64b8bc221ebd8f1bd0
+      internalID: 2079742032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 776
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3815de995edcf5d45a23111bee704ea7
+      internalID: -1957793763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 666
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e6c8e3dc3f78d4fb5e1eba9907efbd
+      internalID: -146501302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 666
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5460026f70686334c970366fe2be98b6
+      internalID: 1959243652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 666
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44cf65cce21857544bb964ed083f1beb
+      internalID: 1254894958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 666
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c117ae154cbb024799ba6364662c9ac
+      internalID: 649975482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 666
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b90de37afb5125428fef755482a1727
+      internalID: -146845564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 666
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f20adf26d4bf25d4d8f6b0c814916a2a
+      internalID: 2141676894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 666
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe835d6b60328ff469a96d6b849042d8
+      internalID: -1053579325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 666
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981a8aa096199824dad3e430e371c0aa
+      internalID: 721759859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 556
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade03b65937eaef43892ff4f0951cf92
+      internalID: -335694420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 556
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3161faffb4bbb6e43b8ed2555500724d
+      internalID: -97035930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 556
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88ed8d3372455b4789737847e37f844
+      internalID: -1202114196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 556
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601eaf1e261ce1140ae89afdae691c57
+      internalID: 165668870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 556
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c475dba4c5bde524a9d4dbe6eb1e5d0e
+      internalID: -749604372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 556
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34989ee267a27d44b80c6170c6158f09
+      internalID: 424139314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 556
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882a02213fca4a248a33f810e2eb97d7
+      internalID: 2104054949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 556
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42c95a1a75c654418068c2ae4f74c32
+      internalID: -1294703938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 446
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198ae9a7ae40dc24d8233f8744b29362
+      internalID: -791277238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 446
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b2352f72752c345a2cb5ba601b895a
+      internalID: 1992498805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 446
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76776a40bff51c5458242b18eccbe107
+      internalID: -1374129329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 446
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8d0b11476c95744a26420d2fd8ad87
+      internalID: -2069871123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 446
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f46951f104bd04ba9513a83e2fe98c
+      internalID: 1096016828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 446
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c79a1d64ab0d04b9b1052401704dcb
+      internalID: 971200316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 446
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0593da5095af89439c9148f1f8624fd
+      internalID: -597247985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 446
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f007dcf9723bb438dd7a13ec65bb7f
+      internalID: -352842023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 336
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405929e6edc6fc045913fba89ad38668
+      internalID: -844968670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 336
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200d7f04237390b49826e264eae9f68f
+      internalID: 995059363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 336
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8dda4b05b4bf0043b21955caea79047
+      internalID: -1452485244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 336
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36c2be61f4c3954f96dd9384cc8b019
+      internalID: -133083985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 336
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4128ff5abfc611047b2141d4a26c7bc0
+      internalID: 922182622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 336
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b191891f0d60454b8ab9d8b5346f1f8
+      internalID: -278577668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 336
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16d5c4fa5226dd43892a25d1f5b9939
+      internalID: -348997528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 336
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a594dbee7b6d641b72ad7e77a6070e
+      internalID: 1557223171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 226
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427e3ea6106092a4582065fe22fe0bdc
+      internalID: -125277210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 226
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85332176e4727c34cbbbffeebb6f3f9f
+      internalID: -1978194527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 226
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b72bb0533ad2b418d0e8a0b90a0e2a
+      internalID: 1826418601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 226
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab65bfec1885764d81c0c8b164b0ddd
+      internalID: -1209870470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 226
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccea110f9b91984f8b373805b7c55c4
+      internalID: -1554929511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 226
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73620889f672a74498e63189086f4efd
+      internalID: 429655993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 226
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604b97239f0f5054c9a12f8d64a9773c
+      internalID: -1866307923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 226
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba351e7515cfaa24db86ae0767414b54
+      internalID: -1195943191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 116
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca9d81349acba04db273d41896795da
+      internalID: 995698338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 116
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bf4ace30f5e944faeca310a0c89e12
+      internalID: -1256985299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 116
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04be346bde97c0a4a8642a6725a8c144
+      internalID: 1059753269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 116
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3351aa11a4b51429d4e93abf1a3021
+      internalID: -663308521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 116
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a832c295a96226c4689ac5ff05f787a0
+      internalID: 842512502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 116
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4187695868bfa642ba5b279d55f799f
+      internalID: -944886151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 116
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871bcd431d78e0747829de414ce3a5ac
+      internalID: -473382834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 116
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c06e2c08e3fdb45b97a8b57fde7a46
+      internalID: -469419948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 6
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b201da921b89f41845ceddfd96b3ce
+      internalID: -780619262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 6
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5966f8e4e797a14429155d5a9bb0723d
+      internalID: 1466612932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 6
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e004c1205ffee9b48a08186ff2cfa655
+      internalID: 1660715948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8401a5fa58f1c9747b2f5c5cedac7b3b
+      internalID: 834577592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 6
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c140a3933a36d9f4c8b10383f6f69b96
+      internalID: -953133908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 6
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6444822421a34949a1effe7a450287a
+      internalID: -1746523264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 6
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453fc567bd67bc24889611c6994d6ab2
+      internalID: 211930438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rando-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 6
+        width: 124
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82620780b6fb134b838e5ade800e984
+      internalID: -886046302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8f7d15d0f8f5b0c4aa70d3841afb782f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rando-Sheet_0: 430140115
+      Rando-Sheet_1: -528113213
+      Rando-Sheet_10: -1870211701
+      Rando-Sheet_11: 1442826835
+      Rando-Sheet_12: 1207611656
+      Rando-Sheet_13: 1567232603
+      Rando-Sheet_14: 2079742032
+      Rando-Sheet_15: -1957793763
+      Rando-Sheet_16: -146501302
+      Rando-Sheet_17: 1959243652
+      Rando-Sheet_18: 1254894958
+      Rando-Sheet_19: 649975482
+      Rando-Sheet_2: 1393541291
+      Rando-Sheet_20: -146845564
+      Rando-Sheet_21: 2141676894
+      Rando-Sheet_22: -1053579325
+      Rando-Sheet_23: 721759859
+      Rando-Sheet_24: -335694420
+      Rando-Sheet_25: -97035930
+      Rando-Sheet_26: -1202114196
+      Rando-Sheet_27: 165668870
+      Rando-Sheet_28: -749604372
+      Rando-Sheet_29: 424139314
+      Rando-Sheet_3: -1243940340
+      Rando-Sheet_30: 2104054949
+      Rando-Sheet_31: -1294703938
+      Rando-Sheet_32: -791277238
+      Rando-Sheet_33: 1992498805
+      Rando-Sheet_34: -1374129329
+      Rando-Sheet_35: -2069871123
+      Rando-Sheet_36: 1096016828
+      Rando-Sheet_37: 971200316
+      Rando-Sheet_38: -597247985
+      Rando-Sheet_39: -352842023
+      Rando-Sheet_4: 1054743879
+      Rando-Sheet_40: -844968670
+      Rando-Sheet_41: 995059363
+      Rando-Sheet_42: -1452485244
+      Rando-Sheet_43: -133083985
+      Rando-Sheet_44: 922182622
+      Rando-Sheet_45: -278577668
+      Rando-Sheet_46: -348997528
+      Rando-Sheet_47: 1557223171
+      Rando-Sheet_48: -125277210
+      Rando-Sheet_49: -1978194527
+      Rando-Sheet_5: -1034627888
+      Rando-Sheet_50: 1826418601
+      Rando-Sheet_51: -1209870470
+      Rando-Sheet_52: -1554929511
+      Rando-Sheet_53: 429655993
+      Rando-Sheet_54: -1866307923
+      Rando-Sheet_55: -1195943191
+      Rando-Sheet_56: 995698338
+      Rando-Sheet_57: -1256985299
+      Rando-Sheet_58: 1059753269
+      Rando-Sheet_59: -663308521
+      Rando-Sheet_6: -219579909
+      Rando-Sheet_60: 842512502
+      Rando-Sheet_61: -944886151
+      Rando-Sheet_62: -473382834
+      Rando-Sheet_63: -469419948
+      Rando-Sheet_64: -780619262
+      Rando-Sheet_65: 1466612932
+      Rando-Sheet_66: 1660715948
+      Rando-Sheet_67: 834577592
+      Rando-Sheet_68: -953133908
+      Rando-Sheet_69: -1746523264
+      Rando-Sheet_7: -558296753
+      Rando-Sheet_70: 211930438
+      Rando-Sheet_71: -886046302
+      Rando-Sheet_8: -204196568
+      Rando-Sheet_9: -1423330920
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
