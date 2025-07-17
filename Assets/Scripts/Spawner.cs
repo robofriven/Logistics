@@ -2,20 +2,17 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour, IOnTick
 {
-    public ushort id;
-    public ThingPool thingPool;  // Direct reference to pool
-    public SpawnerData data;
-    public Destination targetDestination; // Direct reference to destination
-    public Color color;
-
-    public string spawnerName;
-    public ushort spawnerID;
-    public Sprite spawnerSprite;
-    public Sprite destinationSprite;
-    public byte ticksPerSpawn = 5;
-    public Vector2Int position;
-    public Vector2Int direction;
-    public Vector2Int thingDestinationCoords;
+    public ushort id { get; private set; }
+    public ThingPool thingPool { get; private set; }
+    public SpawnerData data { get; private set; }
+    public Destination targetDestination { get; private set; }
+    public Color color { get; private set; }
+    public string spawnerName { get; private set; }
+    public Sprite spawnerSprite { get; private set; }
+    public Sprite destinationSprite { get; private set; }
+    public byte ticksPerSpawn { get; private set; }
+    public Vector2Int position { get; private set; }
+    public Vector2Int direction { get; private set; }
 
     private GameController gameController;
 
@@ -59,13 +56,42 @@ public class Spawner : MonoBehaviour, IOnTick
     private void Spawn()
     {
         Vector2Int spawnPos = position + direction;
-        
+
+        // Get TileController and TileObjectMap from GameController
+        TileController tileController = gameController.tileController;
+        TileObjectMap tileObjectMap = gameController.tileObjectMap;
+
+        Tile spawnTile = tileController.GetTile(spawnPos);
+
+        if (spawnTile == null)
+        {
+            // This can happen if the spawner is near the edge of the map.
+            // It's not necessarily an error, but something to be aware of.
+            return;
+        }
+
+        // Use the map to see if anything is on the target tile.
+        if (tileObjectMap.GetTileObject(spawnTile) != null)
+        {
+            // Can't spawn, tile is occupied.
+            return;
+        }
+
         // Get next ID from game controller
-        int thingId = gameController.GetNextThingId();
-        
+        ushort thingId = gameController.GetNextThingId();
+
         // Get thing from pool and stamp it with info
         Thing thing = thingPool.GetThing(thingId, data.thingToSpawn, spawnPos, targetDestination.position, targetDestination);
-        
-        Debug.Log($"Spawner {name} spawned {thing.name} at {spawnPos}");
+
+        // Add the new object to our map!
+        if (!tileObjectMap.TryAddTileObject(spawnTile, thing.gameObject))
+        {
+            // This should be impossible since we just checked, but it's good practice.
+            Debug.LogError($"Could not add {thing.name} to map at {spawnPos}. Returning to pool.");
+            thingPool.ReturnThing(thing);
+            return;
+        }
+
+        Debug.Log($"Spawner {id} spawned {thing.name} at {spawnPos}");
     }
 }

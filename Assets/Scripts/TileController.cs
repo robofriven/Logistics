@@ -15,6 +15,7 @@ public class TileController : MonoBehaviour
     public Sprite destinationTileSprite;
 
     public Tile[,] tiles { get; private set; }
+    private ushort nextTileId = 0;
 
     public void InitializeWorld()
     {
@@ -37,7 +38,7 @@ public class TileController : MonoBehaviour
             for (int y = 0; y < height; y++)
             {
                 Vector2Int position = new Vector2Int(x, y);
-                Tile tile = TileFactory.CreateTile(this, position, TileType.Empty, tilesObj.transform);
+                Tile tile = TileFactory.CreateTile(this, nextTileId++, position, TileType.Empty, tilesObj.transform);
                 tiles[x, y] = tile;
             }
         }

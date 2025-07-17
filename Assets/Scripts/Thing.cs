@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Thing : MonoBehaviour
 {
-    public int id;
-    public ThingData data;
-    public Vector2Int position;
-    public Vector2Int destination;
-    public Destination destinationObject; // Direct reference instead of lookup
+    public int id { get; private set; }
+    public ThingData data { get; private set; }
+    public Vector2Int position { get; private set; }
+    public Vector2Int destination { get; private set; }
+    public Destination destinationObject { get; private set; }
 
     private GameController gameController;
     private SpriteRenderer spriteRenderer;
@@ -45,7 +45,7 @@ public class Thing : MonoBehaviour
 
     public void MoveTo(Vector2Int newPosition)
     {
-        position = newPosition;
+        this.position = newPosition;
         transform.position = new Vector3(position.x, position.y, 0);
         
         // Use cached sprite renderer

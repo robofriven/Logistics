@@ -34,7 +34,9 @@ public class GameController : MonoBehaviour
     public ushort GetNextSpawnerId() => nextSpawnerId++;
     public ushort GetNextDestinationId() => nextDestinationId++;
     public Vector2Int GetRandomSpawnDirection() => new Vector2Int(UnityEngine.Random.Range(-1, 2), UnityEngine.Random.Range(-1, 2));
-    
+
+    public TileObjectMap tileObjectMap { get; private set; }
+
     public RouteColor GetRandomRouteColor()
     {
         var values = Enum.GetValues(typeof(RouteColor));
@@ -62,6 +64,8 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        tileObjectMap = new TileObjectMap();
+
         if (tileController == null || spawnerData == null || thingPool == null)
         {
             Debug.LogError("Something not assigned in Editor");
@@ -129,7 +133,7 @@ public class GameController : MonoBehaviour
         List<Thing> activeThings = thingPool.GetActiveThings();
         foreach (Thing thing in activeThings)
         {
-            Mover.Move(tileController, thing);
+            Mover.Move(tileController, tileObjectMap, thing);
             thing.OnTick(tick);
         }
 
@@ -174,8 +178,11 @@ public class GameController : MonoBehaviour
             randomPos = GetRandomPositionInBounds();
             tile = tileController.GetTile(randomPos);
             attempts++;
-        } 
-        while (tile != null && !tile.isOccupiable && attempts < maxAttempts);
+            if (tile == null) continue; // guard against null tile
+
+        }
+        // A tile is valid if it's not occupied by a static object AND there's no dynamic object on it.
+        while ((tile.isOccupied || tileObjectMap.GetTileObject(tile) != null) && attempts < maxAttempts);
 
         if (attempts >= maxAttempts)
         {

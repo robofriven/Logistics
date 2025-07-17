@@ -2,18 +2,16 @@ using UnityEngine;
 
 public class Destination : MonoBehaviour
 {
-    public ushort id; // Aquired from GameController
-    public string destinationName;  // Pulled from data
-    public Sprite destinationSprite; // Pulled from data
-    public Color destinationColor = Color.white; // Default color, can be changed later
-    public ThingPool thingPool;
-    public Vector2Int position;
-    public DestinationData data; // Keep reference for less common properties
-
+    public ushort id { get; private set; }
+    public string destinationName { get; private set; }
+    public Sprite destinationSprite { get; private set; }
+    public Color destinationColor { get; private set; } = Color.white;
+    public ThingPool thingPool { get; private set; }
+    public Vector2Int position { get; private set; }
+    public DestinationData data { get; private set; }
 
     private GameController gameController;
 
-    
     public void Initialize(DestinationData data, Vector2Int position, ThingPool thingPool, Color color = default)
     {
         if (color != default)
@@ -24,11 +22,12 @@ public class Destination : MonoBehaviour
         gameController = FindFirstObjectByType<GameController>();
         this.id = gameController.GetNextDestinationId();
         this.data = data;
-        this.destinationName = data.destinationName; // Pull commonly used values
+        this.destinationName = data.destinationName;
         this.destinationSprite = data.destinationSprite;
         this.position = position;
         this.thingPool = thingPool;
     }
+
     public void ReceiveThing(Thing thing)
     {
         Debug.Log($"Destination {destinationName} received {thing.name}"); // Use cached value

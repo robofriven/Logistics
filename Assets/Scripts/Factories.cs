@@ -57,7 +57,7 @@ public static class DestinationFactory
 
 public static class TileFactory
 {
-    public static Tile CreateTile(TileController controller, Vector2Int position, TileType type, Transform parent = null)
+    public static Tile CreateTile(TileController controller, ushort id, Vector2Int position, TileType type, Transform parent = null)
     {
         GameObject tileObj = new GameObject($"Tile_{position.x}_{position.y}");
         if (parent != null)
@@ -70,7 +70,7 @@ public static class TileFactory
         
         SpriteHelper.AttachSprite(tileObj, position, controller.GetTileSprite(type), "Tiles");
         
-        tile.Initialize(controller, position, type);
+        tile.Initialize(id, position, type, controller);
         
         return tile;
     }

@@ -2,30 +2,34 @@ using UnityEngine;
 
 public static class Mover
 {
-    public static bool Move(TileController world, Thing thing)
+    public static bool Move(TileController world, TileObjectMap tileObjectMap, Thing thing)
     {
-        Tile tile = world.GetTile(thing.position);
-        Vector2Int direction = DirectionFromTileType(tile.type);
+        Tile currentTile = world.GetTile(thing.position);
+        if (currentTile == null)
+        {
+            Debug.LogError($"Mover: Could not find tile at {thing.position} for {thing.name}");
+            return false;
+        }
+
+        Vector2Int direction = DirectionFromTileType(currentTile.type);
         if (direction == Vector2Int.zero)
             return false; // No movement for this tile type
 
-        Vector2Int currentPosition = thing.position;
-        Vector2Int newPosition = currentPosition + direction;
+        Vector2Int newPosition = thing.position + direction;
         Tile targetTile = world.GetTile(newPosition);
 
-        if (targetTile == null || targetTile.isOccupied)
-            return false; // Invalid move
+        if (targetTile == null)
+            return false; // Invalid move, off the map
 
-        // Clear old tile
-        world.GetTile(currentPosition)?.SetOccupied(false);
+        // The core logic change: use the TileObjectMap to check for occupancy and perform the move.
+        if (tileObjectMap.TryMoveGameObject(currentTile, targetTile))
+        {
+            // If the map move was successful, then update the Thing's internal position.
+            thing.MoveTo(newPosition);
+            return true;
+        }
 
-        // Move thing
-        thing.MoveTo(newPosition);
-
-        // Set new tile
-        targetTile.SetOccupied(true);
-
-        return true;
+        return false; // Target tile was occupied or something went wrong.
     }
 
     private static Vector2Int DirectionFromTileType(TileType type)
