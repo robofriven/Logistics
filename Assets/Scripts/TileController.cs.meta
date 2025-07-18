@@ -1,16 +1,2 @@
 fileFormatVersion: 2
-guid: f344658a3e6da794b8d14f8d79049e8f
-MonoImporter:
-  externalObjects: {}
-  serializedVersion: 2
-  defaultReferences:
-  - emptyTileSprite: {fileID: 21300000, guid: 9f2b52e9d9bc68c4cb864ae2b3f96d94, type: 3}
-  - upTileSprite: {fileID: -7161646058830949300, guid: 5372e49bda383b148b1fcbcdb59a382c, type: 3}
-  - downTileSprite: {fileID: 6882329166455221437, guid: da30a6b8a6c3e4c4f81dcaf7eda6c050, type: 3}
-  - rightTileSprite: {fileID: -8207769247240218710, guid: 7b93436662789c643a0bfb6c7c9336c9, type: 3}
-  - leftTileSprite: {fileID: 7961363597974014409, guid: 1a120ed79b2acec4e9644197b2d13987, type: 3}
-  executionOrder: 0
-  icon: {instanceID: 0}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+guid: 9f5411c3c87ce454aa23a96b45570b9e

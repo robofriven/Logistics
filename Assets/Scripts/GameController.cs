@@ -4,7 +4,7 @@ using System;
 
 public class GameController : MonoBehaviour
 {
-    public TileController tileController;
+    public TileGrid tileGrid;
     public ThingPool thingPool;
     [SerializeField]
     [Tooltip("Spawner data for the spawner")]
@@ -66,7 +66,7 @@ public class GameController : MonoBehaviour
     {
         tileObjectMap = new TileObjectMap();
 
-        if (tileController == null || spawnerData == null || thingPool == null)
+        if (tileGrid == null || spawnerData == null || thingPool == null)
         {
             Debug.LogError("Something not assigned in Editor");
             return;
@@ -78,7 +78,7 @@ public class GameController : MonoBehaviour
             return;
         }
 
-        tileController.InitializeWorld();
+        tileGrid.InitializeWorld();
 
         // Create the first pair
         SpawnDestinationSpawnerPair();
@@ -133,7 +133,7 @@ public class GameController : MonoBehaviour
         List<Thing> activeThings = thingPool.GetActiveThings();
         foreach (Thing thing in activeThings)
         {
-            Mover.Move(tileController, tileObjectMap, thing);
+            Mover.Move(tileGrid, tileObjectMap, thing);
             thing.OnTick(tick);
         }
 
@@ -149,19 +149,20 @@ public class GameController : MonoBehaviour
         Score += amount;
         Debug.Log($"Score: {Score}");
     }
+    //
 
 
     public Vector2Int GetRandomPositionInBounds()
     {
-        int randomX = UnityEngine.Random.Range(0, tileController.width);
-        int randomY = UnityEngine.Random.Range(0, tileController.height);
+        int randomX = UnityEngine.Random.Range(0, tileGrid.width);
+        int randomY = UnityEngine.Random.Range(0, tileGrid.height);
         return new Vector2Int(randomX, randomY);
     }
 
     public Vector2Int GetRandomInteriorPosition()
     {
-        int randomX = UnityEngine.Random.Range(1, tileController.width - 1);
-        int randomY = UnityEngine.Random.Range(1, tileController.height - 1);
+        int randomX = UnityEngine.Random.Range(1, tileGrid.width - 1);
+        int randomY = UnityEngine.Random.Range(1, tileGrid.height - 1);
         return new Vector2Int(randomX, randomY);
     }
 
@@ -176,30 +177,44 @@ public class GameController : MonoBehaviour
         do
         {
             randomPos = GetRandomPositionInBounds();
-            tile = tileController.GetTile(randomPos);
+            tile = tileGrid.GetTile(randomPos);
             attempts++;
             if (tile == null) continue; // guard against null tile
 
-        }
-        // A tile is valid if it's not occupied by a static object AND there's no dynamic object on it.
-        while ((tile.isOccupied || tileObjectMap.GetTileObject(tile) != null) && attempts < maxAttempts);
+        } while (tile.IsOccupied && attempts < maxAttempts);
 
         if (attempts >= maxAttempts)
         {
-            Debug.LogWarning("Could not find valid random position after 100 attempts");
+            Debug.LogWarning("Could not find a valid position after " + maxAttempts + " attempts.");
+            return new Vector2Int(-1, -1); // Indicate failure
         }
 
         return randomPos;
     }
-    public void SpawnDestinationSpawnerPair()
-    {
-        Vector2Int spawnerPosition = GetRandomInteriorPosition();
-        Vector2Int destinationPosition = GetRandomPositionInBounds();
-        Vector2Int spawnDirection = GetRandomSpawnDirection();
-        RouteColor route = GetRandomRouteColor();
-        Color color = ConvertRouteToColor(route);
 
-        Destination destination = DestinationFactory.CreateDestination(destinationData, destinationPosition, thingPool, color);
-        SpawnerFactory.CreateSpawner(spawnerData, spawnerPosition, spawnDirection, thingPool, destination, this, color);
+    private void SpawnDestinationSpawnerPair()
+    {
+        RouteColor routeColor = GetRandomRouteColor();
+        Color color = ConvertRouteToColor(routeColor);
+
+        // Create and initialize destination
+        Vector2Int destinationPosition = GetRandomValidPosition();
+        if (destinationPosition == new Vector2Int(-1, -1))
+        {
+            Debug.LogError("Failed to find a valid position for the destination.");
+            return;
+        }
+        Destination destination = DestinationFactory.CreateDestination(destinationData, destinationPosition, color, routeColor, this);
+        tileObjectMap.TryAddTileObject(destination, destinationPosition);
+
+
+        // Create and initialize spawner
+        Vector2Int spawnerPosition = GetRandomValidPosition();
+        if (spawnerPosition == new Vector2Int(-1, -1))
+        {
+            Debug.LogError("Failed to find a valid position for the spawner.");
+            return;
+        }
+        SpawnerFactory.CreateSpawner(spawnerData, thingPool, destination, this, spawnerPosition, color, routeColor);
     }
 }

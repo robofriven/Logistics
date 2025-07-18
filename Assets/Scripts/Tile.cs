@@ -7,15 +7,15 @@ public class Tile : MonoBehaviour
     public TileType type { get; private set; }
     public bool isOccupied { get; private set; }
 
-    private TileController tileController;
+    private TileGrid tileGrid;
 
-    public void Initialize(ushort id, Vector2Int position, TileType type, TileController controller)
+    public void Initialize(ushort id, Vector2Int position, TileType type, TileGrid controller)
     {
         this.id = id;
         this.position = position;
         this.type = type;
         this.isOccupied = false;
-        this.tileController = controller;
+        this.tileGrid = controller;
         transform.position = new Vector3(position.x, position.y, 0);
     }
 
@@ -27,7 +27,7 @@ public class Tile : MonoBehaviour
         SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
         if (sr != null)
         {
-            sr.sprite = tileController.GetTileSprite(type);
+            sr.sprite = tileGrid.GetTileSprite(type);
         }
         else
         {

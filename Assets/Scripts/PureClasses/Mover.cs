@@ -2,7 +2,7 @@ using UnityEngine;
 
 public static class Mover
 {
-    public static bool Move(TileController world, TileObjectMap tileObjectMap, Thing thing)
+    public static bool Move(TileGrid world, TileObjectMap tileObjectMap, Thing thing)
     {
         Tile currentTile = world.GetTile(thing.position);
         if (currentTile == null)

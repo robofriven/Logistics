@@ -57,11 +57,11 @@ public class Spawner : MonoBehaviour, IOnTick
     {
         Vector2Int spawnPos = position + direction;
 
-        // Get TileController and TileObjectMap from GameController
-        TileController tileController = gameController.tileController;
+        // Get TileGrid and TileObjectMap from GameController
+        TileGrid tileGrid = gameController.tileGrid;
         TileObjectMap tileObjectMap = gameController.tileObjectMap;
 
-        Tile spawnTile = tileController.GetTile(spawnPos);
+        Tile spawnTile = tileGrid.GetTile(spawnPos);
 
         if (spawnTile == null)
         {
