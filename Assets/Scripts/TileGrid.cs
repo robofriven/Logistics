@@ -63,6 +63,9 @@ public class TileGrid : MonoBehaviour
             case TileType.Down: return downTileSprite;
             case TileType.Right: return rightTileSprite;
             case TileType.Left: return leftTileSprite;
+            case TileType.Wall: return wallTileSprite;
+            case TileType.Spawner: return spawnerTileSprite;
+            case TileType.Destination: return destinationTileSprite;
             default: return null; // or a default sprite
         }
     }

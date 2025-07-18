@@ -923,7 +923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5f2e467e52f6546ae7692b2ab98d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileController: {fileID: 1859153606}
+  tileGrid: {fileID: 1859153606}
   thingPool: {fileID: 1859153607}
   spawnerData: {fileID: 11400000, guid: 0109acc0d1035e446b1d16eb8df467a9, type: 2}
   destinationData: {fileID: 11400000, guid: 9ff085e982caa11429ab5c14bb461946, type: 2}
@@ -957,7 +957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 519420031}
-  tileController: {fileID: 1859153606}
+  tileGrid: {fileID: 1859153606}
 --- !u!114 &1859153606
 MonoBehaviour:
   m_ObjectHideFlags: 0

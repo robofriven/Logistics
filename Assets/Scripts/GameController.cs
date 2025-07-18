@@ -181,7 +181,7 @@ public class GameController : MonoBehaviour
             attempts++;
             if (tile == null) continue; // guard against null tile
 
-        } while (tile.IsOccupied && attempts < maxAttempts);
+        } while (tile.isOccupied && attempts < maxAttempts);
 
         if (attempts >= maxAttempts)
         {
@@ -204,7 +204,7 @@ public class GameController : MonoBehaviour
             Debug.LogError("Failed to find a valid position for the destination.");
             return;
         }
-        Destination destination = DestinationFactory.CreateDestination(destinationData, destinationPosition, color, routeColor, this);
+        Destination destination = DestinationFactory.CreateDestination(destinationData, destinationPosition, thingPool, color);
         tileObjectMap.TryAddTileObject(destination, destinationPosition);
 
 
@@ -215,6 +215,7 @@ public class GameController : MonoBehaviour
             Debug.LogError("Failed to find a valid position for the spawner.");
             return;
         }
-        SpawnerFactory.CreateSpawner(spawnerData, thingPool, destination, this, spawnerPosition, color, routeColor);
+        Vector2Int spawnDirection = GetRandomSpawnDirection();
+        SpawnerFactory.CreateSpawner(spawnerData, spawnerPosition, spawnDirection, thingPool, destination, this, color);
     }
 }
